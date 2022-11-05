@@ -77,7 +77,7 @@ func (header *RequestHeader) FiberFetch(url string) *Respnse {
 
 	// Execute
 	if err := agent.Parse(); err != nil {
-		return &Respnse{}
+		return &Respnse{Error: err}
 	}
 
 	// Parse

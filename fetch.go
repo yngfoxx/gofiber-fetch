@@ -94,7 +94,7 @@ func (header *RequestHeader) FiberFetch(url string) *Respnse {
 	}
 
 	if code >= 400 && body != nil {
-		return &Respnse{Status: code, Error: fmt.Errorf("error: %s", string(body))}
+		return &Respnse{Status: code, Error: fmt.Errorf(string(body))}
 	}
 
 	return &Respnse{Status: code, Data: body}
